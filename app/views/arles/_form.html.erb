@@ -1,0 +1,21 @@
+<%= form_for(@arl) do |f| %>
+  <% if @arl.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@arl.errors.count, "error") %> prohibited this arl from being saved:</h2>
+
+      <ul>
+      <% @arl.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

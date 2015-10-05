@@ -1,0 +1,81 @@
+<%= form_for(@clinic_history) do |f| %>
+  <% if @clinic_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic_history.errors.count, "error") %> prohibited this clinic_history from being saved:</h2>
+
+      <ul>
+      <% @clinic_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cove %><br>
+    <%= f.text_field :cove %>
+  </div>
+  <div class="field">
+    <%= f.label :mobiel_service %><br>
+    <%= f.text_field :mobiel_service %>
+  </div>
+  <div class="field">
+    <%= f.label :airport %><br>
+    <%= f.number_field :airport %>
+  </div>
+  <div class="field">
+    <%= f.label :type_service %><br>
+    <%= f.number_field :type_service %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.text_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br>
+    <%= f.text_field :origin %>
+  </div>
+  <div class="field">
+    <%= f.label :destination %><br>
+    <%= f.text_field :destination %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :accompanist_name %><br>
+    <%= f.text_field :accompanist_name %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship %><br>
+    <%= f.number_field :relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_consultation %><br>
+    <%= f.text_area :reason_for_consultation %>
+  </div>
+  <div class="field">
+    <%= f.label :current_illness %><br>
+    <%= f.text_area :current_illness %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

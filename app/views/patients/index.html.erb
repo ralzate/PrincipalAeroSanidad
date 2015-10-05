@@ -1,0 +1,145 @@
+<style type="text/css">
+  .avatar-pasciente:hover{
+    background-color: transparent !important;
+  }
+</style>
+    <div class="container-fluid" style="background-color:#e8e8e8">
+        <div class="container-pad" id="property-listings">
+            
+            <div class="row">
+              <div class="col-md-12">
+                <h1>Listado Pascientes</h1>
+                <p>Listado de los pascientes que se encuentran registrados</p>
+              </div>
+            </div>
+            <% @patients.each do |patient| %>
+            <div class="row">
+                <div class="col-sm-12"> 
+
+                    <!-- Begin Listing: 609 W GRAVERS LN-->
+                    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+                        <div class="media">
+                            <a class="pull-left avatar-pasciente" href="#" target="_parent" >
+                            <img alt="image"  src="http://s.ytimg.com/yts/img/avatar_720-vflYJnzBZ.png" style="width:100px;height:100px; border-radius: 55px;"></a>
+
+                            <div class="clearfix visible-sm"></div>
+
+                            <div class="media-body fnt-smaller">
+                                <a href="#" target="_parent"></a>
+
+                                <h4 class="media-heading">
+                                  <a href="#" target="_parent">Identificacion :<%= patient.document %></a></h4>
+
+
+                                <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                                    <li><%= patient.first_name %> <%= patient.second_name %></li>
+
+                                    <li style="list-style: none">|</li>
+
+                                    <li><%= patient.first_surname %> <%= patient.second_surname %></li>
+
+                                    <li style="list-style: none">|</li>
+
+                                    <li><%= patient.email %></li>
+                                </ul>
+
+                                <p class="hidden-xs">Genero: <%= patient.gender %>, Tipo de sangre: <%= patient.blood_type %>, Nacionalidad <%= patient.nacionality %></p>
+                                <button type="button" class="btn btn-default"><%= link_to 'Ver', patient %></button>
+                                <button type="button" class="btn btn-default"><%= link_to 'Editar', edit_patient_path(patient) %></button>
+                                <button type="button" class="btn btn-default"><%= link_to 'Eliminar', patient, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+                                </button>
+
+                            </div>
+                        </div>
+                    </div><!-- End Listing-->
+                </div>
+            </div><!-- End row -->
+            <% end %>
+                              <%= link_to 'Nuevo Pasciente', new_patient_path %>
+
+        </div><!-- End container -->
+    </div>
+
+<style type="text/css">
+  /**** BASE ****/
+body {
+    color: #888;   
+}
+a {
+    color: #03a1d1;
+    text-decoration: none!important;
+}
+
+/**** LAYOUT ****/
+.list-inline>li {
+    padding: 0 10px 0 0;
+}
+.container-pad {
+    padding: 30px 15px;
+}
+
+
+/**** MODULE ****/
+.bgc-fff {
+    background-color: #fff!important;
+}
+.box-shad {
+    -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+.brdr {
+    border: 1px solid #ededed;
+}
+
+/* Font changes */
+.fnt-smaller {
+    font-size: .9em;
+}
+.fnt-lighter {
+    color: #bbb;
+}
+
+/* Padding - Margins */
+.pad-10 {
+    padding: 10px!important;
+}
+.mrg-0 {
+    margin: 0!important;
+}
+.btm-mrg-10 {
+    margin-bottom: 10px!important;
+}
+.btm-mrg-20 {
+    margin-bottom: 20px!important;
+}
+
+/* Color  */
+.clr-535353 {
+    color: #535353;
+}
+
+
+
+
+/**** MEDIA QUERIES ****/
+@media only screen and (max-width: 991px) {
+    #property-listings .property-listing {
+        padding: 5px!important;
+    }
+    #property-listings .property-listing a {
+        margin: 0;
+    }
+    #property-listings .property-listing .media-body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #property-listings .property-listing img {
+        max-width: 180px;
+    }
+}
+
+</style>

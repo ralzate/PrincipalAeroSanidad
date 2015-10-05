@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Arles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arles.each do |arl| %>
+      <tr>
+        <td><%= arl.name %></td>
+        <td><%= link_to 'Show', arl %></td>
+        <td><%= link_to 'Edit', edit_arl_path(arl) %></td>
+        <td><%= link_to 'Destroy', arl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arl', new_arl_path %>

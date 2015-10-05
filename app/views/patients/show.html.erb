@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <strong>Second name:</strong>
+  <%= @patient.second_name %>
+</p>
+
+<p>
+  <strong>First surname:</strong>
+  <%= @patient.first_surname %>
+</p>
+
+<p>
+  <strong>Second surname:</strong>
+  <%= @patient.second_surname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @patient.email %>
+</p>
+
+<p>
+  <strong>Type document:</strong>
+  <%= @patient.type_document %>
+</p>
+
+<p>
+  <strong>Document:</strong>
+  <%= @patient.document %>
+</p>
+
+<p>
+  <strong>Days age:</strong>
+  <%= @patient.days_age %>
+</p>
+
+<p>
+  <strong>Months age:</strong>
+  <%= @patient.months_age %>
+</p>
+
+<p>
+  <strong>Years age:</strong>
+  <%= @patient.years_age %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @patient.birthdate %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @patient.gender %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @patient.profession %>
+</p>
+
+<p>
+  <strong>Blood type:</strong>
+  <%= @patient.blood_type %>
+</p>
+
+<p>
+  <strong>Nacionality:</strong>
+  <%= @patient.nacionality %>
+</p>
+
+<p>
+  <strong>Eps:</strong>
+  <%= @patient.eps %>
+</p>
+
+<p>
+  <strong>Arl:</strong>
+  <%= @patient.arl %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @patient.condition %>
+</p>
+
+
+<p>
+  <strong>City:</strong>
+  <%= @patient.city %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @patient.user %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

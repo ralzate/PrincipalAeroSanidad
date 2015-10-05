@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  department: MyString
+  user_id: 
+  cove: MyString
+  mobiel_service: MyString
+  airport: 1
+  type_service: 1
+  patient_id: 
+  origin: MyString
+  destination: MyString
+  company: MyString
+  accompanist_name: MyString
+  relationship: 1
+  phone: MyString
+  reason_for_consultation: MyText
+  current_illness: MyText
+
+two:
+  city: MyString
+  department: MyString
+  user_id: 
+  cove: MyString
+  mobiel_service: MyString
+  airport: 1
+  type_service: 1
+  patient_id: 
+  origin: MyString
+  destination: MyString
+  company: MyString
+  accompanist_name: MyString
+  relationship: 1
+  phone: MyString
+  reason_for_consultation: MyText
+  current_illness: MyText

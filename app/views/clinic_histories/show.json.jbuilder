@@ -1,0 +1,1 @@
+json.extract! @clinic_history, :id, :city, :department, :user_id, :cove, :mobiel_service, :airport, :type_service, :patient_id, :origin, :destination, :company, :accompanist_name, :relationship, :phone, :reason_for_consultation, :current_illness, :created_at, :updated_at
