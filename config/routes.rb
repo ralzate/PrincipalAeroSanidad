@@ -15,12 +15,15 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :patients do
-    resources :clinic_histories
+
+  resources :patients , :path => "pascientes" do
+    resources :clinic_histories, :path => "historias_clinicas"
+    resources :personal_histories, :path => "historias_personales"
     member do
       get :activate
     end
   end
+  
   resources :products
   resources :sessions
   resources :reset_passwords, only: [:new, :create, :update, :edit]

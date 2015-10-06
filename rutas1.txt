@@ -1,0 +1,126 @@
+                     Prefix Verb   URI Pattern                                               Controller#Action
+                      users GET    /usuarios(.:format)                                       users#index
+                            POST   /usuarios(.:format)                                       users#create
+                   new_user GET    /usuarios/new(.:format)                                   users#new
+                  edit_user GET    /usuarios/:id/edit(.:format)                              users#edit
+                       user GET    /usuarios/:id(.:format)                                   users#show
+                            PATCH  /usuarios/:id(.:format)                                   users#update
+                            PUT    /usuarios/:id(.:format)                                   users#update
+                            DELETE /usuarios/:id(.:format)                                   users#destroy
+                      roles GET    /roles(.:format)                                          roles#index
+                            POST   /roles(.:format)                                          roles#create
+                    new_rol GET    /roles/new(.:format)                                      roles#new
+                   edit_rol GET    /roles/:id/edit(.:format)                                 roles#edit
+                        rol GET    /roles/:id(.:format)                                      roles#show
+                            PATCH  /roles/:id(.:format)                                      roles#update
+                            PUT    /roles/:id(.:format)                                      roles#update
+                            DELETE /roles/:id(.:format)                                      roles#destroy
+                     cities GET    /ciudades(.:format)                                       cities#index
+                            POST   /ciudades(.:format)                                       cities#create
+                   new_city GET    /ciudades/new(.:format)                                   cities#new
+                  edit_city GET    /ciudades/:id/edit(.:format)                              cities#edit
+                       city GET    /ciudades/:id(.:format)                                   cities#show
+                            PATCH  /ciudades/:id(.:format)                                   cities#update
+                            PUT    /ciudades/:id(.:format)                                   cities#update
+                            DELETE /ciudades/:id(.:format)                                   cities#destroy
+                departments GET    /departamentos(.:format)                                  departments#index
+                            POST   /departamentos(.:format)                                  departments#create
+             new_department GET    /departamentos/new(.:format)                              departments#new
+            edit_department GET    /departamentos/:id/edit(.:format)                         departments#edit
+                 department GET    /departamentos/:id(.:format)                              departments#show
+                            PATCH  /departamentos/:id(.:format)                              departments#update
+                            PUT    /departamentos/:id(.:format)                              departments#update
+                            DELETE /departamentos/:id(.:format)                              departments#destroy
+                  countries GET    /paises(.:format)                                         countries#index
+                            POST   /paises(.:format)                                         countries#create
+                new_country GET    /paises/new(.:format)                                     countries#new
+               edit_country GET    /paises/:id/edit(.:format)                                countries#edit
+                    country GET    /paises/:id(.:format)                                     countries#show
+                            PATCH  /paises/:id(.:format)                                     countries#update
+                            PUT    /paises/:id(.:format)                                     countries#update
+                            DELETE /paises/:id(.:format)                                     countries#destroy
+                      arles GET    /arls(.:format)                                           arles#index
+                            POST   /arls(.:format)                                           arles#create
+                    new_arl GET    /arls/new(.:format)                                       arles#new
+                   edit_arl GET    /arls/:id/edit(.:format)                                  arles#edit
+                        arl GET    /arls/:id(.:format)                                       arles#show
+                            PATCH  /arls/:id(.:format)                                       arles#update
+                            PUT    /arls/:id(.:format)                                       arles#update
+                            DELETE /arls/:id(.:format)                                       arles#destroy
+                      epses GET    /eps(.:format)                                            epses#index
+                            POST   /eps(.:format)                                            epses#create
+                    new_eps GET    /eps/new(.:format)                                        epses#new
+                   edit_eps GET    /eps/:id/edit(.:format)                                   epses#edit
+                        eps GET    /eps/:id(.:format)                                        epses#show
+                            PATCH  /eps/:id(.:format)                                        epses#update
+                            PUT    /eps/:id(.:format)                                        epses#update
+                            DELETE /eps/:id(.:format)                                        epses#destroy
+        reset_passwords_new GET    /reset_passwords/new(.:format)                            reset_passwords#new
+                 pages_home GET    /pages/home(.:format)                                     pages#home
+              pages_contact GET    /pages/contact(.:format)                                  pages#contact
+                 pages_help GET    /pages/help(.:format)                                     pages#help
+                       root GET    /                                                         pages#home
+   patient_clinic_histories GET    /patients/:patient_id/clinic_histories(.:format)          clinic_histories#index
+                            POST   /patients/:patient_id/clinic_histories(.:format)          clinic_histories#create
+ new_patient_clinic_history GET    /patients/:patient_id/clinic_histories/new(.:format)      clinic_histories#new
+edit_patient_clinic_history GET    /patients/:patient_id/clinic_histories/:id/edit(.:format) clinic_histories#edit
+     patient_clinic_history GET    /patients/:patient_id/clinic_histories/:id(.:format)      clinic_histories#show
+                            PATCH  /patients/:patient_id/clinic_histories/:id(.:format)      clinic_histories#update
+                            PUT    /patients/:patient_id/clinic_histories/:id(.:format)      clinic_histories#update
+                            DELETE /patients/:patient_id/clinic_histories/:id(.:format)      clinic_histories#destroy
+           activate_patient GET    /patients/:id/activate(.:format)                          patients#activate
+                   patients GET    /patients(.:format)                                       patients#index
+                            POST   /patients(.:format)                                       patients#create
+                new_patient GET    /patients/new(.:format)                                   patients#new
+               edit_patient GET    /patients/:id/edit(.:format)                              patients#edit
+                    patient GET    /patients/:id(.:format)                                   patients#show
+                            PATCH  /patients/:id(.:format)                                   patients#update
+                            PUT    /patients/:id(.:format)                                   patients#update
+                            DELETE /patients/:id(.:format)                                   patients#destroy
+                   products GET    /products(.:format)                                       products#index
+                            POST   /products(.:format)                                       products#create
+                new_product GET    /products/new(.:format)                                   products#new
+               edit_product GET    /products/:id/edit(.:format)                              products#edit
+                    product GET    /products/:id(.:format)                                   products#show
+                            PATCH  /products/:id(.:format)                                   products#update
+                            PUT    /products/:id(.:format)                                   products#update
+                            DELETE /products/:id(.:format)                                   products#destroy
+                   sessions GET    /sessions(.:format)                                       sessions#index
+                            POST   /sessions(.:format)                                       sessions#create
+                new_session GET    /sessions/new(.:format)                                   sessions#new
+               edit_session GET    /sessions/:id/edit(.:format)                              sessions#edit
+                    session GET    /sessions/:id(.:format)                                   sessions#show
+                            PATCH  /sessions/:id(.:format)                                   sessions#update
+                            PUT    /sessions/:id(.:format)                                   sessions#update
+                            DELETE /sessions/:id(.:format)                                   sessions#destroy
+            reset_passwords POST   /reset_passwords(.:format)                                reset_passwords#create
+         new_reset_password GET    /reset_passwords/new(.:format)                            reset_passwords#new
+        edit_reset_password GET    /reset_passwords/:id/edit(.:format)                       reset_passwords#edit
+             reset_password PATCH  /reset_passwords/:id(.:format)                            reset_passwords#update
+                            PUT    /reset_passwords/:id(.:format)                            reset_passwords#update
+                    message POST   /messages/:id(.:format)                                   messages#new
+                   messages GET    /messages(.:format)                                       messages#index
+                            POST   /messages(.:format)                                       messages#create
+                new_message GET    /messages/new(.:format)                                   messages#new
+               edit_message GET    /messages/:id/edit(.:format)                              messages#edit
+                            GET    /messages/:id(.:format)                                   messages#show
+                            PATCH  /messages/:id(.:format)                                   messages#update
+                            PUT    /messages/:id(.:format)                                   messages#update
+                            DELETE /messages/:id(.:format)                                   messages#destroy
+         reply_conversation POST   /conversations/:id/reply(.:format)                        conversations#reply
+         trash_conversation POST   /conversations/:id/trash(.:format)                        conversations#trash
+       untrash_conversation POST   /conversations/:id/untrash(.:format)                      conversations#untrash
+     trashbin_conversations GET    /conversations/trashbin(.:format)                         conversations#trashbin
+  empty_trash_conversations POST   /conversations/empty_trash(.:format)                      conversations#empty_trash
+              conversations GET    /conversations(.:format)                                  conversations#index
+                            POST   /conversations(.:format)                                  conversations#create
+           new_conversation GET    /conversations/new(.:format)                              conversations#new
+          edit_conversation GET    /conversations/:id/edit(.:format)                         conversations#edit
+               conversation GET    /conversations/:id(.:format)                              conversations#show
+                            PATCH  /conversations/:id(.:format)                              conversations#update
+                            PUT    /conversations/:id(.:format)                              conversations#update
+                            DELETE /conversations/:id(.:format)                              conversations#destroy
+                     signup GET    /signup(.:format)                                         users#new
+                      login GET    /login(.:format)                                          sessions#new
+                            POST   /login(.:format)                                          sessions#create
+                     logout DELETE /logout(.:format)                                         sessions#destroy

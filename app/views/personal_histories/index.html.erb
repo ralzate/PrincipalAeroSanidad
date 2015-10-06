@@ -1,0 +1,97 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Personal Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Neunatales</th>
+      <th>Neunatales description</th>
+      <th>Patologicos</th>
+      <th>Patologicos description</th>
+      <th>Quirurgicos</th>
+      <th>Quirurgicos description</th>
+      <th>Farmacologicos</th>
+      <th>Farmacologicos description</th>
+      <th>Alergicos</th>
+      <th>Alergicos description</th>
+      <th>Toxicos</th>
+      <th>Toxicos description</th>
+      <th>Traumaticos</th>
+      <th>Traumaticos description</th>
+      <th>Hospitables</th>
+      <th>Hospitables description</th>
+      <th>Atep laboral</th>
+      <th>Atep laboral description</th>
+      <th>Familiar</th>
+      <th>Familiar description</th>
+      <th>Inmunologicos</th>
+      <th>Inmunologios description</th>
+      <th>Asociado viajes de vuelo</th>
+      <th>Asociado viajes de vuelo description</th>
+      <th>Menstrual cycle</th>
+      <th>Gestational age</th>
+      <th>Eco</th>
+      <th>Fum</th>
+      <th>Pregnancy</th>
+      <th>G</th>
+      <th>P</th>
+      <th>C</th>
+      <th>A</th>
+      <th>M</th>
+      <th>V</th>
+      <th>E</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_histories.each do |personal_history| %>
+      <tr>
+        <td><%= personal_history.neunatales %></td>
+        <td><%= personal_history.neunatales_description %></td>
+        <td><%= personal_history.patologicos %></td>
+        <td><%= personal_history.patologicos_description %></td>
+        <td><%= personal_history.quirurgicos %></td>
+        <td><%= personal_history.quirurgicos_description %></td>
+        <td><%= personal_history.farmacologicos %></td>
+        <td><%= personal_history.farmacologicos_description %></td>
+        <td><%= personal_history.alergicos %></td>
+        <td><%= personal_history.alergicos_description %></td>
+        <td><%= personal_history.toxicos %></td>
+        <td><%= personal_history.toxicos_description %></td>
+        <td><%= personal_history.traumaticos %></td>
+        <td><%= personal_history.traumaticos_description %></td>
+        <td><%= personal_history.hospitables %></td>
+        <td><%= personal_history.hospitables_description %></td>
+        <td><%= personal_history.atep_laboral %></td>
+        <td><%= personal_history.atep_laboral_description %></td>
+        <td><%= personal_history.familiar %></td>
+        <td><%= personal_history.familiar_description %></td>
+        <td><%= personal_history.inmunologicos %></td>
+        <td><%= personal_history.inmunologios_description %></td>
+        <td><%= personal_history.asociado_viajes_de_vuelo %></td>
+        <td><%= personal_history.asociado_viajes_de_vuelo_description %></td>
+        <td><%= personal_history.menstrual_cycle %></td>
+        <td><%= personal_history.gestational_age %></td>
+        <td><%= personal_history.eco %></td>
+        <td><%= personal_history.fum %></td>
+        <td><%= personal_history.pregnancy %></td>
+        <td><%= personal_history.g %></td>
+        <td><%= personal_history.p %></td>
+        <td><%= personal_history.c %></td>
+        <td><%= personal_history.a %></td>
+        <td><%= personal_history.m %></td>
+        <td><%= personal_history.v %></td>
+        <td><%= personal_history.e %></td>
+        <td><%= link_to 'Show', personal_history %></td>
+        <td><%= link_to 'Edit', edit_personal_history_path(personal_history) %></td>
+        <td><%= link_to 'Destroy', personal_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personal history', new_personal_history_path %>

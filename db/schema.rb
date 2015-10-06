@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005100426) do
+ActiveRecord::Schema.define(version: 20151006214413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -175,6 +175,47 @@ ActiveRecord::Schema.define(version: 20151005100426) do
   add_index "patients", ["city_id"], name: "index_patients_on_city_id", using: :btree
   add_index "patients", ["eps_id"], name: "index_patients_on_eps_id", using: :btree
   add_index "patients", ["user_id"], name: "index_patients_on_user_id", using: :btree
+
+  create_table "personal_histories", force: :cascade do |t|
+    t.boolean  "neunatales"
+    t.text     "neunatales_description"
+    t.boolean  "patologicos"
+    t.text     "patologicos_description"
+    t.boolean  "quirurgicos"
+    t.text     "quirurgicos_description"
+    t.boolean  "farmacologicos"
+    t.text     "farmacologicos_description"
+    t.boolean  "alergicos"
+    t.text     "alergicos_description"
+    t.boolean  "toxicos"
+    t.text     "toxicos_description"
+    t.boolean  "traumaticos"
+    t.text     "traumaticos_description"
+    t.boolean  "hospitables"
+    t.text     "hospitables_description"
+    t.boolean  "atep_laboral"
+    t.text     "atep_laboral_description"
+    t.boolean  "familiar"
+    t.text     "familiar_description"
+    t.boolean  "inmunologicos"
+    t.text     "inmunologios_description"
+    t.boolean  "asociado_viajes_de_vuelo"
+    t.text     "asociado_viajes_de_vuelo_description"
+    t.integer  "menstrual_cycle"
+    t.string   "gestational_age"
+    t.string   "eco"
+    t.integer  "fum"
+    t.boolean  "pregnancy"
+    t.string   "g"
+    t.string   "p"
+    t.string   "c"
+    t.string   "a"
+    t.string   "m"
+    t.string   "v"
+    t.string   "e"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "title"

@@ -1,0 +1,46 @@
+<%= simple_form_for(@personal_history) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :neunatales %>
+    <%= f.input :neunatales_description %>
+    <%= f.input :patologicos %>
+    <%= f.input :patologicos_description %>
+    <%= f.input :quirurgicos %>
+    <%= f.input :quirurgicos_description %>
+    <%= f.input :farmacologicos %>
+    <%= f.input :farmacologicos_description %>
+    <%= f.input :alergicos %>
+    <%= f.input :alergicos_description %>
+    <%= f.input :toxicos %>
+    <%= f.input :toxicos_description %>
+    <%= f.input :traumaticos %>
+    <%= f.input :traumaticos_description %>
+    <%= f.input :hospitables %>
+    <%= f.input :hospitables_description %>
+    <%= f.input :atep_laboral %>
+    <%= f.input :atep_laboral_description %>
+    <%= f.input :familiar %>
+    <%= f.input :familiar_description %>
+    <%= f.input :inmunologicos %>
+    <%= f.input :inmunologios_description %>
+    <%= f.input :asociado_viajes_de_vuelo %>
+    <%= f.input :asociado_viajes_de_vuelo_description %>
+    <%= f.input :menstrual_cycle %>
+    <%= f.input :gestational_age %>
+    <%= f.input :eco %>
+    <%= f.input :fum %>
+    <%= f.input :pregnancy %>
+    <%= f.input :g %>
+    <%= f.input :p %>
+    <%= f.input :c %>
+    <%= f.input :a %>
+    <%= f.input :m %>
+    <%= f.input :v %>
+    <%= f.input :e %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

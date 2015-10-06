@@ -1,6 +1,6 @@
 <%- model_class = ClinicHistory -%>
   <div class="page-header">
-    <h1><%= link_to image_tag("php.png ")%> <%= @clinic_history.id %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize  %></h1>
   </div>
    <div class="navbar">
     <div class="navbar-inner">
@@ -28,30 +28,34 @@
         </tr>
       </thead>
       <tbody>
-       <%= render @clinic_histories %>
-      </tbody>
-      <tfoot>
-        <tr>
-           <td><%= link_to image_tag('glyphicons_005_car.png'), new_patient_clinic_history_path, :remote => true, :class => 'btn btn-mini', :rel => "tooltip", :title => "Igresar Vehiculos" %> </td>
-              <td><%= link_to image_tag("atras.png"), patients_path, :class => 'btn btn-mini', :rel => "tooltip", :title => "Regresar a Usuarios" %></td>
-        </tr>
-      </tfoot>
-      <tfoot>
-          <tr>
-              <td><b>Total Vehiculos </b></td>
-            <td>
-                <p id='total_regs'><%= @clinic_histories.total_entries %></p>
-            </td>
-          </tr>
-      </tfoot>
-    </table>
-  </div>
-    </table>
-      <div align="center">
-        <div id="pagination" class="pagination">
-          </ul>
-              <%= will_paginate @clinic_histories, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente&raquo;' %>
-          </ul>
-        </div>
-      </div>
+    <% @clinic_histories.each do |clinic_history| %>
+      <tr>
+        <td><%= link_to clinic_history.id, patient_clinic_history_path(@patient,clinic_history) %></td>
+        <td><%= clinic_history.id %></td>
+        <td><%=l clinic_history.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_patient_clinic_history_path(@patient,clinic_history), :class => 'btn btn-mini' %>
+
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      patient_clinic_history_path(@patient,clinic_history),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>iii
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_patient_clinic_history_path(@patient),
+            :class => 'btn btn-primary' %> | 
+<%= link_to t('.back', :default => t("helpers.links.back")),
+            patients_path,
+            :class => 'btn btn-inverse' %>
 

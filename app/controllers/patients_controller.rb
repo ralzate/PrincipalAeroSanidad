@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
-  # before_action :set_patient, only: [:show, :edit, :update, :destroy]
-  before_filter :find_patient_clinic_histories
+  before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  # before_filter :find_patient_clinic_histories
   # GET /patients
   # GET /patients.json
   def index
@@ -61,11 +61,15 @@ class PatientsController < ApplicationController
     end
   end
 
-  private
+    private
     # Use callbacks to share common setup or constraints between actions.
-    def find_patient_clinic_histories
-      @patient= Patient.find(params[:patient_id])
-      @clinic_history = ClinicHistory.find(params[:id]) if params[:id]
+    def set_patient
+      @patient = Patient.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def patient_params
+      params.require(:patient).permit(:first_name, :second_name, :first_surname, :second_surname, :email, :type_document, :document, :days_age, :months_age, :years_age, :birthdate, :gender, :profession, :blood_type, :nacionality, :eps_id, :arl_id, :address, :condition, :city_id, :user_id)
     end
 
 
