@@ -1,0 +1,56 @@
+
+
+<button><a href="javascript:history.back()">Historia Personales</a> </button>
+
+
+<script>
+function goBack() {
+    window.history.go(+1);
+}
+</script>
+<button onclick="goBack()">Examen FIsico</button>
+
+
+
+<%= simple_form_for [@patient, @system_review], :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.input :cardiovascular %>
+  <%= error_span(@system_review[:cardiovascular]) %>
+  <%= f.input :cardiovascular_description %>
+  <%= error_span(@system_review[:cardiovascular_description]) %>
+  <%= f.input :respiratory %>
+  <%= error_span(@system_review[:respiratory]) %>
+  <%= f.input :abdominal %>
+  <%= error_span(@system_review[:abdominal]) %>
+  <%= f.input :abdominal_description %>
+  <%= error_span(@system_review[:abdominal_description]) %>
+  <%= f.input :genito_urinario %>
+  <%= error_span(@system_review[:genito_urinario]) %>
+  <%= f.input :genito_urinario_description %>
+  <%= error_span(@system_review[:genito_urinario_description]) %>
+  <%= f.input :neurological %>
+  <%= error_span(@system_review[:neurological]) %>
+  <%= f.input :neurological_description %>
+  <%= error_span(@system_review[:neurological_description]) %>
+  <%= f.input :mental %>
+  <%= error_span(@system_review[:mental]) %>
+  <%= f.input :mental_description %>
+  <%= error_span(@system_review[:mental_description]) %>
+  <%= f.input :sense_organ %>
+  <%= error_span(@system_review[:sense_organ]) %>
+  <%= f.input :sense_organ_description %>
+  <%= error_span(@system_review[:sense_organ_description]) %>
+  <%= f.input :skeletal_muscle %>
+  <%= error_span(@system_review[:skeletal_muscle]) %>
+  <%= f.input :skeletal_muscle_description %>
+  <%= error_span(@system_review[:skeletal_muscle_description]) %>
+  <%= f.input :skin_and_appendages %>
+  <%= error_span(@system_review[:skin_and_appendages]) %>
+  <%= f.input :skin_and_appendages_description %>
+  <%= error_span(@system_review[:skin_and_appendages_description]) %>
+
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patient_system_reviews_path(@patient), :class => 'btn btn-default' %>
+<% end %>

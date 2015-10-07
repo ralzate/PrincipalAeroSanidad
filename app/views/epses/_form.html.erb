@@ -1,3 +1,14 @@
+
+<button onclick="goForward()">Arl</button>
+
+<script>
+function goForward() {
+    window.history.forward();
+}
+</script>
+
+
+
 <%= form_for(@eps) do |f| %>
   <% if @eps.errors.any? %>
     <div id="error_explanation">

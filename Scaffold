@@ -27,68 +27,13 @@ familiar_description:text inmunologicos:boolean inmunologios_description:text as
 asociado_viajes_de_vuelo_description:text menstrual_cycle:integer gestational_age:string eco:string fum:integer pregnancy:boolean g:string p:string c:string a:string m:string v:string e:string 
 
 
-cardiovascular:boolean 
-cardiovascular_description:text 
-respiratory:boolean 
-abdominal:boolean 
-abdominal_description:text 
-genito_urinario:boolean 
-genito_urinario_description:text 
-neurological:string neurological_description:text 
-mental:boolean 
-mental_description:text 
-sense_organ:boolean 
-sense_organ_description:text 
-skeletal_muscle:boolean 
-skeletal_muscle_description:text 
-skin_and_appendages:string 
+rails g scaffold system_review cardiovascular:boolean cardiovascular_description:text respiratory:boolean abdominal:boolean abdominal_description:text 
+genito_urinario:boolean genito_urinario_description:text neurological:string neurological_description:text mental:boolean mental_description:text 
+sense_organ:boolean sense_organ_description:text skeletal_muscle:boolean skeletal_muscle_description:text skin_and_appendages:string 
 skin_and_appendages_description:text 
-ta_mmgh:string 
-heart_rate:string 
-breathing_frequency:string 
-sat_of_o_ambiente:string 
-sat_of_o_supplementary:string
 
-temperature:string 
-weight in kilograms:string 
-height_in_centimeters:string 
-glucose measurement:string
-head:boolean 
-head_description:text 
-sense_organ:boolean
-sense_organ_description:string 
-neck:boolean
-neck_description:text 
-rib_cage:boolean
-rib_cage_description:text
-heart:boolean
-heart_description:text 
-lungs:boolean
-lungs_description:text 
-abdomen:boolean
-abdomen_description:text 
-genitourinary:boolean
-genitourinary_description:text 
-rectum:boolean
-rectum_description:text 
-extremities:boolean
-extremities_description:text 
-skin_and_appendages:boolean
-skin_and_appendages_description:text
-skeletal_muscle:boolean
-skeletal_muscle_description:text
-mental:boolean
-mental_description:text
-neurological:boolean
-neurological_description:text
+rails g scaffold physical_exam 	ta_mmgh:string heart_rate:string breathing_frequency:string sat_of_o_ambiente:string sat_of_o_supplementary:string temperature:string weight in kilograms:string height_in_centimeters:string glucose measurement:string head:boolean head_description:text sense_organ:boolean sense_organ_description:string neck:boolean neck_description:text rib_cage:boolean rib_cage_description:text heart:boolean
+heart_description:text lungs:boolean lungs_description:text abdomen:boolean abdomen_description:text genitourinary:boolean genitourinary_description:text rectum:boolean rectum_description:text extremities:boolean extremities_description:text skin_and_appendages:boolean
+skin_and_appendages_description:text skeletal_muscle:boolean skeletal_muscle_description:text mental:boolean mental_description:text neurological:boolean neurological_description:text alteration:integer eye_opening:integer verbal_answer:integer motor_response:integer other_signs:integer
 
-alteration:integer 
-eye_opening:integer
-verbal_answer:integer
-motor_response:integer 
-other_signs:integer
-
-analysis:text
-print_diagnosed:text
-plan_and_treatment:text
-observations_recommendations:text 
+rails g scaffold additional_information analysis:text print_diagnosed:text plan_and_treatment:text observations_recommendations:text 

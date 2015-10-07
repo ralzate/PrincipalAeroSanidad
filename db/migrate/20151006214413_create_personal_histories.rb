@@ -37,6 +37,7 @@ class CreatePersonalHistories < ActiveRecord::Migration
       t.string :m
       t.string :v
       t.string :e
+      t.references :clinic_history, index: true, foreign_key: true
 
       t.timestamps null: false
     end

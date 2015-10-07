@@ -1,0 +1,77 @@
+<%- model_class = SystemReview -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:cardiovascular) %></th>
+      <th><%= model_class.human_attribute_name(:cardiovascular_description) %></th>
+      <th><%= model_class.human_attribute_name(:respiratory) %></th>
+      <th><%= model_class.human_attribute_name(:abdominal) %></th>
+      <th><%= model_class.human_attribute_name(:abdominal_description) %></th>
+      <th><%= model_class.human_attribute_name(:genito_urinario) %></th>
+      <th><%= model_class.human_attribute_name(:genito_urinario_description) %></th>
+      <th><%= model_class.human_attribute_name(:neurological) %></th>
+      <th><%= model_class.human_attribute_name(:neurological_description) %></th>
+      <th><%= model_class.human_attribute_name(:mental) %></th>
+      <th><%= model_class.human_attribute_name(:mental_description) %></th>
+      <th><%= model_class.human_attribute_name(:sense_organ) %></th>
+      <th><%= model_class.human_attribute_name(:sense_organ_description) %></th>
+      <th><%= model_class.human_attribute_name(:skeletal_muscle) %></th>
+      <th><%= model_class.human_attribute_name(:skeletal_muscle_description) %></th>
+      <th><%= model_class.human_attribute_name(:skin_and_appendages) %></th>
+      <th><%= model_class.human_attribute_name(:skin_and_appendages_description) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @system_reviews.each do |system_review| %>
+      <tr>
+        <td><%= system_review.cardiovascular %></td>
+        <td><%= system_review.cardiovascular_description %></td>
+        <td><%= system_review.respiratory %></td>
+        <td><%= system_review.abdominal %></td>
+        <td><%= system_review.abdominal_description %></td>
+        <td><%= system_review.genito_urinario %></td>
+        <td><%= system_review.genito_urinario_description %></td>
+        <td><%= system_review.neurological %></td>
+        <td><%= system_review.neurological_description %></td>
+        <td><%= system_review.mental %></td>
+        <td><%= system_review.mental_description %></td>
+        <td><%= system_review.sense_organ %></td>
+        <td><%= system_review.sense_organ_description %></td>
+        <td><%= system_review.skeletal_muscle %></td>
+        <td><%= system_review.skeletal_muscle_description %></td>
+        <td><%= system_review.skin_and_appendages %></td>
+        <td><%= system_review.skin_and_appendages_description %></td>
+        <td><%=l system_review.created_at %></td>
+        <td>
+
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_patient_system_review_path(@patient,system_review), :class => 'btn btn-mini' %>
+
+
+
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      patient_system_review_path(@patient,system_review),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+                      
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_patient_system_review_path(@patient),
+            :class => 'btn btn-primary' %> | 
+<%= link_to t('.back', :default => t("helpers.links.back")),
+            patients_path,
+            :class => 'btn btn-inverse' %>

@@ -1,0 +1,107 @@
+<%- model_class = PhysicalExam -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:ta_mmgh) %>:</strong></dt>
+  <dd><%= @physical_exam.ta_mmgh %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:heart_rate) %>:</strong></dt>
+  <dd><%= @physical_exam.heart_rate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:breathing_frequency) %>:</strong></dt>
+  <dd><%= @physical_exam.breathing_frequency %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sat_of_o_ambiente) %>:</strong></dt>
+  <dd><%= @physical_exam.sat_of_o_ambiente %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sat_of_o_supplementary) %>:</strong></dt>
+  <dd><%= @physical_exam.sat_of_o_supplementary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:temperature) %>:</strong></dt>
+  <dd><%= @physical_exam.temperature %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
+  <dd><%= @physical_exam.weight %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:in) %>:</strong></dt>
+  <dd><%= @physical_exam.in %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:kilograms) %>:</strong></dt>
+  <dd><%= @physical_exam.kilograms %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:height_in_centimeters) %>:</strong></dt>
+  <dd><%= @physical_exam.height_in_centimeters %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:glucose) %>:</strong></dt>
+  <dd><%= @physical_exam.glucose %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:measurement) %>:</strong></dt>
+  <dd><%= @physical_exam.measurement %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:head) %>:</strong></dt>
+  <dd><%= @physical_exam.head %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:head_description) %>:</strong></dt>
+  <dd><%= @physical_exam.head_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sense_organ) %>:</strong></dt>
+  <dd><%= @physical_exam.sense_organ %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sense_organ_description) %>:</strong></dt>
+  <dd><%= @physical_exam.sense_organ_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neck) %>:</strong></dt>
+  <dd><%= @physical_exam.neck %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neck_description) %>:</strong></dt>
+  <dd><%= @physical_exam.neck_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rib_cage) %>:</strong></dt>
+  <dd><%= @physical_exam.rib_cage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rib_cage_description) %>:</strong></dt>
+  <dd><%= @physical_exam.rib_cage_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:heart) %>:</strong></dt>
+  <dd><%= @physical_exam.heart %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:heart_description) %>:</strong></dt>
+  <dd><%= @physical_exam.heart_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lungs) %>:</strong></dt>
+  <dd><%= @physical_exam.lungs %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lungs_description) %>:</strong></dt>
+  <dd><%= @physical_exam.lungs_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:abdomen) %>:</strong></dt>
+  <dd><%= @physical_exam.abdomen %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:abdomen_description) %>:</strong></dt>
+  <dd><%= @physical_exam.abdomen_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:genitourinary) %>:</strong></dt>
+  <dd><%= @physical_exam.genitourinary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:genitourinary_description) %>:</strong></dt>
+  <dd><%= @physical_exam.genitourinary_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rectum) %>:</strong></dt>
+  <dd><%= @physical_exam.rectum %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:rectum_description) %>:</strong></dt>
+  <dd><%= @physical_exam.rectum_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:extremities) %>:</strong></dt>
+  <dd><%= @physical_exam.extremities %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:extremities_description) %>:</strong></dt>
+  <dd><%= @physical_exam.extremities_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skin_and_appendages) %>:</strong></dt>
+  <dd><%= @physical_exam.skin_and_appendages %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skin_and_appendages_description) %>:</strong></dt>
+  <dd><%= @physical_exam.skin_and_appendages_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skeletal_muscle) %>:</strong></dt>
+  <dd><%= @physical_exam.skeletal_muscle %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skeletal_muscle_description) %>:</strong></dt>
+  <dd><%= @physical_exam.skeletal_muscle_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mental) %>:</strong></dt>
+  <dd><%= @physical_exam.mental %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mental_description) %>:</strong></dt>
+  <dd><%= @physical_exam.mental_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neurological) %>:</strong></dt>
+  <dd><%= @physical_exam.neurological %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neurological_description) %>:</strong></dt>
+  <dd><%= @physical_exam.neurological_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:alteration) %>:</strong></dt>
+  <dd><%= @physical_exam.alteration %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:eye_opening) %>:</strong></dt>
+  <dd><%= @physical_exam.eye_opening %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:verbal_answer) %>:</strong></dt>
+  <dd><%= @physical_exam.verbal_answer %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:motor_response) %>:</strong></dt>
+  <dd><%= @physical_exam.motor_response %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:other_signs) %>:</strong></dt>
+  <dd><%= @physical_exam.other_signs %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              physical_exams_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_physical_exam_path(@physical_exam), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              physical_exam_path(@physical_exam),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

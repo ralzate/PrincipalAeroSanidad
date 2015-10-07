@@ -1,50 +1,52 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Personal Histories</h1>
-
-<table>
+<%- model_class = PersonalHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Neunatales</th>
-      <th>Neunatales description</th>
-      <th>Patologicos</th>
-      <th>Patologicos description</th>
-      <th>Quirurgicos</th>
-      <th>Quirurgicos description</th>
-      <th>Farmacologicos</th>
-      <th>Farmacologicos description</th>
-      <th>Alergicos</th>
-      <th>Alergicos description</th>
-      <th>Toxicos</th>
-      <th>Toxicos description</th>
-      <th>Traumaticos</th>
-      <th>Traumaticos description</th>
-      <th>Hospitables</th>
-      <th>Hospitables description</th>
-      <th>Atep laboral</th>
-      <th>Atep laboral description</th>
-      <th>Familiar</th>
-      <th>Familiar description</th>
-      <th>Inmunologicos</th>
-      <th>Inmunologios description</th>
-      <th>Asociado viajes de vuelo</th>
-      <th>Asociado viajes de vuelo description</th>
-      <th>Menstrual cycle</th>
-      <th>Gestational age</th>
-      <th>Eco</th>
-      <th>Fum</th>
-      <th>Pregnancy</th>
-      <th>G</th>
-      <th>P</th>
-      <th>C</th>
-      <th>A</th>
-      <th>M</th>
-      <th>V</th>
-      <th>E</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:neunatales) %></th>
+      <th><%= model_class.human_attribute_name(:neunatales_description) %></th>
+      <th><%= model_class.human_attribute_name(:patologicos) %></th>
+      <th><%= model_class.human_attribute_name(:patologicos_description) %></th>
+      <th><%= model_class.human_attribute_name(:quirurgicos) %></th>
+      <th><%= model_class.human_attribute_name(:quirurgicos_description) %></th>
+      <th><%= model_class.human_attribute_name(:farmacologicos) %></th>
+      <th><%= model_class.human_attribute_name(:farmacologicos_description) %></th>
+      <th><%= model_class.human_attribute_name(:alergicos) %></th>
+      <th><%= model_class.human_attribute_name(:alergicos_description) %></th>
+      <th><%= model_class.human_attribute_name(:toxicos) %></th>
+      <th><%= model_class.human_attribute_name(:toxicos_description) %></th>
+      <th><%= model_class.human_attribute_name(:traumaticos) %></th>
+      <th><%= model_class.human_attribute_name(:traumaticos_description) %></th>
+      <th><%= model_class.human_attribute_name(:hospitables) %></th>
+      <th><%= model_class.human_attribute_name(:hospitables_description) %></th>
+      <th><%= model_class.human_attribute_name(:atep_laboral) %></th>
+      <th><%= model_class.human_attribute_name(:atep_laboral_description) %></th>
+      <th><%= model_class.human_attribute_name(:familiar) %></th>
+      <th><%= model_class.human_attribute_name(:familiar_description) %></th>
+      <th><%= model_class.human_attribute_name(:inmunologicos) %></th>
+      <th><%= model_class.human_attribute_name(:inmunologios_description) %></th>
+      <th><%= model_class.human_attribute_name(:asociado_viajes_de_vuelo) %></th>
+      <th><%= model_class.human_attribute_name(:asociado_viajes_de_vuelo_description) %></th>
+      <th><%= model_class.human_attribute_name(:menstrual_cycle) %></th>
+      <th><%= model_class.human_attribute_name(:gestational_age) %></th>
+      <th><%= model_class.human_attribute_name(:eco) %></th>
+      <th><%= model_class.human_attribute_name(:fum) %></th>
+      <th><%= model_class.human_attribute_name(:pregnancy) %></th>
+      <th><%= model_class.human_attribute_name(:g) %></th>
+      <th><%= model_class.human_attribute_name(:p) %></th>
+      <th><%= model_class.human_attribute_name(:c) %></th>
+      <th><%= model_class.human_attribute_name(:a) %></th>
+      <th><%= model_class.human_attribute_name(:m) %></th>
+      <th><%= model_class.human_attribute_name(:v) %></th>
+      <th><%= model_class.human_attribute_name(:e) %></th>
+      <th><%= model_class.human_attribute_name(:patient_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @personal_histories.each do |personal_history| %>
       <tr>
@@ -84,14 +86,30 @@
         <td><%= personal_history.m %></td>
         <td><%= personal_history.v %></td>
         <td><%= personal_history.e %></td>
-        <td><%= link_to 'Show', personal_history %></td>
-        <td><%= link_to 'Edit', edit_personal_history_path(personal_history) %></td>
-        <td><%= link_to 'Destroy', personal_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= personal_history.patient_id %></td>
+        <td><%=l personal_history.created_at %></td>
+        <td>
+
+
+
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_patient_personal_history_path(@patient,personal_history), :class => 'btn btn-mini' %>
+
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      patient_personal_history_path(@patient,personal_history),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Personal history', new_personal_history_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_patient_personal_history_path(@patient),
+            :class => 'btn btn-primary' %> | 
+<%= link_to t('.back', :default => t("helpers.links.back")),
+            patients_path,
+            :class => 'btn btn-inverse' %>

@@ -1,82 +1,47 @@
+<script>
+function goBack() {
+    window.history.go(+1);
+}
+</script>
+<button onclick="goBack()">Historia Personal</button>
+
+
 <%= simple_form_for [@patient, @clinic_history], :html => { :class => 'form-horizontal' } do |f| %>
 
-  <% if @clinic_history.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@clinic_history.errors.count, "error") %> prohibited this clinic_history from being saved:</h2>
+  <%= f.input :city %>
+  <%= error_span(@clinic_history[:city]) %>
+  <%= f.input :department %>
+  <%= error_span(@clinic_history[:department]) %>
+  <%= f.input :user_id %>
+  <%= error_span(@clinic_history[:user_id]) %>
+  <%= f.input :cove %>
+  <%= error_span(@clinic_history[:cove]) %>
+  <%= f.input :mobiel_service %>
+  <%= error_span(@clinic_history[:mobiel_service]) %>
+  <%= f.input :airport %>
+  <%= error_span(@clinic_history[:airport]) %>
+  <%= f.input :type_service %>
+  <%= error_span(@clinic_history[:type_service]) %>
+  <%= f.input :patient_id %>
+  <%= error_span(@clinic_history[:patient_id]) %>
+  <%= f.input :origin %>
+  <%= error_span(@clinic_history[:origin]) %>
+  <%= f.input :destination %>
+  <%= error_span(@clinic_history[:destination]) %>
+  <%= f.input :company %>
+  <%= error_span(@clinic_history[:company]) %>
+  <%= f.input :accompanist_name %>
+  <%= error_span(@clinic_history[:accompanist_name]) %>
+  <%= f.input :relationship %>
+  <%= error_span(@clinic_history[:relationship]) %>
+  <%= f.input :phone %>
+  <%= error_span(@clinic_history[:phone]) %>
+  <%= f.input :reason_for_consultation %>
+  <%= error_span(@clinic_history[:reason_for_consultation]) %>
+  <%= f.input :current_illness %>
+  <%= error_span(@clinic_history[:current_illness]) %>
 
-      <ul>
-      <% @clinic_history.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :department %><br>
-    <%= f.text_field :department %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :cove %><br>
-    <%= f.text_field :cove %>
-  </div>
-  <div class="field">
-    <%= f.label :mobiel_service %><br>
-    <%= f.text_field :mobiel_service %>
-  </div>
-  <div class="field">
-    <%= f.label :airport %><br>
-    <%= f.number_field :airport %>
-  </div>
-  <div class="field">
-    <%= f.label :type_service %><br>
-    <%= f.number_field :type_service %>
-  </div>
-  <div class="field">
-    <%= f.label :patient_id %><br>
-    <%= f.text_field :patient_id %>
-  </div>
-  <div class="field">
-    <%= f.label :origin %><br>
-    <%= f.text_field :origin %>
-  </div>
-  <div class="field">
-    <%= f.label :destination %><br>
-    <%= f.text_field :destination %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :accompanist_name %><br>
-    <%= f.text_field :accompanist_name %>
-  </div>
-  <div class="field">
-    <%= f.label :relationship %><br>
-    <%= f.number_field :relationship %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :reason_for_consultation %><br>
-    <%= f.text_area :reason_for_consultation %>
-  </div>
-  <div class="field">
-    <%= f.label :current_illness %><br>
-    <%= f.text_area :current_illness %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patient_clinic_histories_path(@patient), :class => 'btn btn-default' %>
 <% end %>

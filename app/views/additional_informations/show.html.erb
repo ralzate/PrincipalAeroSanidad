@@ -1,0 +1,25 @@
+<%- model_class = AdditionalInformation -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:analysis) %>:</strong></dt>
+  <dd><%= @additional_information.analysis %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:print_diagnosed) %>:</strong></dt>
+  <dd><%= @additional_information.print_diagnosed %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:plan_and_treatment) %>:</strong></dt>
+  <dd><%= @additional_information.plan_and_treatment %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:observations_recommendations) %>:</strong></dt>
+  <dd><%= @additional_information.observations_recommendations %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              additional_informations_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_additional_information_path(@additional_information), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              additional_information_path(@additional_information),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

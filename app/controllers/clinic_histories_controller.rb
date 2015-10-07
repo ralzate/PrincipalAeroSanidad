@@ -31,7 +31,7 @@ class ClinicHistoriesController < ApplicationController
 
     respond_to do |format|
       if @clinic_history.save
-        format.html { redirect_to patient_clinic_histories_path(@patient, @clinic_history), notice: 'was successfully created.' }
+        format.html { redirect_to new_patient_clinic_history_personal_history_path(@patient, @clinic_history), notice: 'Eps was successfully created.' }
         format.json { render :show, status: :created, location: @clinic_history }
       else
         format.html { render :new }

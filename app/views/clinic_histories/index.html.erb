@@ -1,56 +1,74 @@
 <%- model_class = ClinicHistory -%>
-  <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize  %></h1>
-  </div>
-   <div class="navbar">
-    <div class="navbar-inner">
-    <li id='buscar' class="brand" href="#">Buscar</li> 
-      <div class="row">
-        <div class="span6">
-          <form method="GET" class="form-inline" >
-            <input id='buscar' name="buscar" class="search-query" type="text"  placeholder="Buscar" >
-            <a  rel="tooltip" title="Ingresar datos a buscar"><button id='buscar' type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i></button></a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-    <table class="table table-striped table-bordered table-condensed">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Placa</th>
-          <th>color</th>
-          <th>Marca</th>
-          <th>Modelo</th>
-          <th>Tipo vehiculo</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
+      <th><%= model_class.human_attribute_name(:department) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:cove) %></th>
+      <th><%= model_class.human_attribute_name(:mobiel_service) %></th>
+      <th><%= model_class.human_attribute_name(:airport) %></th>
+      <th><%= model_class.human_attribute_name(:type_service) %></th>
+      <th><%= model_class.human_attribute_name(:patient_id) %></th>
+      <th><%= model_class.human_attribute_name(:origin) %></th>
+      <th><%= model_class.human_attribute_name(:destination) %></th>
+      <th><%= model_class.human_attribute_name(:company) %></th>
+      <th><%= model_class.human_attribute_name(:accompanist_name) %></th>
+      <th><%= model_class.human_attribute_name(:relationship) %></th>
+      <th><%= model_class.human_attribute_name(:phone) %></th>
+      <th><%= model_class.human_attribute_name(:reason_for_consultation) %></th>
+      <th><%= model_class.human_attribute_name(:current_illness) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
     <% @clinic_histories.each do |clinic_history| %>
       <tr>
-        <td><%= link_to clinic_history.id, patient_clinic_history_path(@patient,clinic_history) %></td>
-        <td><%= clinic_history.id %></td>
+        <td><%= clinic_history.city %></td>
+        <td><%= clinic_history.department %></td>
+        <td><%= clinic_history.user_id %></td>
+        <td><%= clinic_history.cove %></td>
+        <td><%= clinic_history.mobiel_service %></td>
+        <td><%= clinic_history.airport %></td>
+        <td><%= clinic_history.type_service %></td>
+        <td><%= clinic_history.patient_id %></td>
+        <td><%= clinic_history.origin %></td>
+        <td><%= clinic_history.destination %></td>
+        <td><%= clinic_history.company %></td>
+        <td><%= clinic_history.accompanist_name %></td>
+        <td><%= clinic_history.relationship %></td>
+        <td><%= clinic_history.phone %></td>
+        <td><%= clinic_history.reason_for_consultation %></td>
+        <td><%= clinic_history.current_illness %></td>
         <td><%=l clinic_history.created_at %></td>
         <td>
+
+
+
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_patient_clinic_history_path(@patient,clinic_history), :class => 'btn btn-mini' %>
 
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+
+
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       patient_clinic_history_path(@patient,clinic_history),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>iii
+                      :class => 'btn btn-mini btn-danger' %>
 
         </td>
       </tr>
     <% end %>
   </tbody>
-
-
-
 </table>
+
+
+
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_patient_clinic_history_path(@patient),
@@ -58,4 +76,3 @@
 <%= link_to t('.back', :default => t("helpers.links.back")),
             patients_path,
             :class => 'btn btn-inverse' %>
-

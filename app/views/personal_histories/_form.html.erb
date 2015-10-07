@@ -1,46 +1,94 @@
-<%= simple_form_for(@personal_history) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :neunatales %>
-    <%= f.input :neunatales_description %>
-    <%= f.input :patologicos %>
-    <%= f.input :patologicos_description %>
-    <%= f.input :quirurgicos %>
-    <%= f.input :quirurgicos_description %>
-    <%= f.input :farmacologicos %>
-    <%= f.input :farmacologicos_description %>
-    <%= f.input :alergicos %>
-    <%= f.input :alergicos_description %>
-    <%= f.input :toxicos %>
-    <%= f.input :toxicos_description %>
-    <%= f.input :traumaticos %>
-    <%= f.input :traumaticos_description %>
-    <%= f.input :hospitables %>
-    <%= f.input :hospitables_description %>
-    <%= f.input :atep_laboral %>
-    <%= f.input :atep_laboral_description %>
-    <%= f.input :familiar %>
-    <%= f.input :familiar_description %>
-    <%= f.input :inmunologicos %>
-    <%= f.input :inmunologios_description %>
-    <%= f.input :asociado_viajes_de_vuelo %>
-    <%= f.input :asociado_viajes_de_vuelo_description %>
-    <%= f.input :menstrual_cycle %>
-    <%= f.input :gestational_age %>
-    <%= f.input :eco %>
-    <%= f.input :fum %>
-    <%= f.input :pregnancy %>
-    <%= f.input :g %>
-    <%= f.input :p %>
-    <%= f.input :c %>
-    <%= f.input :a %>
-    <%= f.input :m %>
-    <%= f.input :v %>
-    <%= f.input :e %>
-  </div>
+<button><a href="javascript:history.back()">Historia Clinica</a> </button>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+
+<script>
+function goBack() {
+    window.history.go(+1);
+}
+</script>
+<button onclick="goBack()">Revision Por Sistemas</button>
+
+
+<%= simple_form_for [@clinic_history, @personal_history], :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.input :neunatales %>
+  <%= error_span(@personal_history[:neunatales]) %>
+  <%= f.input :neunatales_description %>
+  <%= error_span(@personal_history[:neunatales_description]) %>
+  <%= f.input :patologicos %>
+  <%= error_span(@personal_history[:patologicos]) %>
+  <%= f.input :patologicos_description %>
+  <%= error_span(@personal_history[:patologicos_description]) %>
+  <%= f.input :quirurgicos %>
+  <%= error_span(@personal_history[:quirurgicos]) %>
+  <%= f.input :quirurgicos_description %>
+  <%= error_span(@personal_history[:quirurgicos_description]) %>
+  <%= f.input :farmacologicos %>
+  <%= error_span(@personal_history[:farmacologicos]) %>
+  <%= f.input :farmacologicos_description %>
+  <%= error_span(@personal_history[:farmacologicos_description]) %>
+  <%= f.input :alergicos %>
+  <%= error_span(@personal_history[:alergicos]) %>
+  <%= f.input :alergicos_description %>
+  <%= error_span(@personal_history[:alergicos_description]) %>
+  <%= f.input :toxicos %>
+  <%= error_span(@personal_history[:toxicos]) %>
+  <%= f.input :toxicos_description %>
+  <%= error_span(@personal_history[:toxicos_description]) %>
+  <%= f.input :traumaticos %>
+  <%= error_span(@personal_history[:traumaticos]) %>
+  <%= f.input :traumaticos_description %>
+  <%= error_span(@personal_history[:traumaticos_description]) %>
+  <%= f.input :hospitables %>
+  <%= error_span(@personal_history[:hospitables]) %>
+  <%= f.input :hospitables_description %>
+  <%= error_span(@personal_history[:hospitables_description]) %>
+  <%= f.input :atep_laboral %>
+  <%= error_span(@personal_history[:atep_laboral]) %>
+  <%= f.input :atep_laboral_description %>
+  <%= error_span(@personal_history[:atep_laboral_description]) %>
+  <%= f.input :familiar %>
+  <%= error_span(@personal_history[:familiar]) %>
+  <%= f.input :familiar_description %>
+  <%= error_span(@personal_history[:familiar_description]) %>
+  <%= f.input :inmunologicos %>
+  <%= error_span(@personal_history[:inmunologicos]) %>
+  <%= f.input :inmunologios_description %>
+  <%= error_span(@personal_history[:inmunologios_description]) %>
+  <%= f.input :asociado_viajes_de_vuelo %>
+  <%= error_span(@personal_history[:asociado_viajes_de_vuelo]) %>
+  <%= f.input :asociado_viajes_de_vuelo_description %>
+  <%= error_span(@personal_history[:asociado_viajes_de_vuelo_description]) %>
+  <%= f.input :menstrual_cycle %>
+  <%= error_span(@personal_history[:menstrual_cycle]) %>
+  <%= f.input :gestational_age %>
+  <%= error_span(@personal_history[:gestational_age]) %>
+  <%= f.input :eco %>
+  <%= error_span(@personal_history[:eco]) %>
+  <%= f.input :fum %>
+  <%= error_span(@personal_history[:fum]) %>
+  <%= f.input :pregnancy %>
+  <%= error_span(@personal_history[:pregnancy]) %>
+  <%= f.input :g %>
+  <%= error_span(@personal_history[:g]) %>
+  <%= f.input :p %>
+  <%= error_span(@personal_history[:p]) %>
+  <%= f.input :c %>
+  <%= error_span(@personal_history[:c]) %>
+  <%= f.input :a %>
+  <%= error_span(@personal_history[:a]) %>
+  <%= f.input :m %>
+  <%= error_span(@personal_history[:m]) %>
+  <%= f.input :v %>
+  <%= error_span(@personal_history[:v]) %>
+  <%= f.input :e %>
+  <%= error_span(@personal_history[:e]) %>
+  <%= f.input :clinic_history_id %>
+  <%= error_span(@personal_history[:clinic_history_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patient_personal_histories_path(@patient), :class => 'btn btn-default' %>
+
 <% end %>

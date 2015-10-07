@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardiovascular: false
+  cardiovascular_description: MyText
+  respiratory: false
+  abdominal: false
+  abdominal_description: MyText
+  genito_urinario: false
+  genito_urinario_description: MyText
+  neurological: MyString
+  neurological_description: MyText
+  mental: false
+  mental_description: MyText
+  sense_organ: false
+  sense_organ_description: MyText
+  skeletal_muscle: false
+  skeletal_muscle_description: MyText
+  skin_and_appendages: MyString
+  skin_and_appendages_description: MyText
+
+two:
+  cardiovascular: false
+  cardiovascular_description: MyText
+  respiratory: false
+  abdominal: false
+  abdominal_description: MyText
+  genito_urinario: false
+  genito_urinario_description: MyText
+  neurological: MyString
+  neurological_description: MyText
+  mental: false
+  mental_description: MyText
+  sense_organ: false
+  sense_organ_description: MyText
+  skeletal_muscle: false
+  skeletal_muscle_description: MyText
+  skin_and_appendages: MyString
+  skin_and_appendages_description: MyText

@@ -1,0 +1,113 @@
+
+
+
+<button><a href="javascript:history.back()">Revision por sistema</a> </button>
+
+
+<script>
+function goBack() {
+    window.history.go(+1);
+}
+</script>
+<button onclick="goBack()">Información adicional</button>
+
+
+
+
+<%= simple_form_for [@patient, @physical_exam], :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.input :ta_mmgh %>
+  <%= error_span(@physical_exam[:ta_mmgh]) %>
+  <%= f.input :heart_rate %>
+  <%= error_span(@physical_exam[:heart_rate]) %>
+  <%= f.input :breathing_frequency %>
+  <%= error_span(@physical_exam[:breathing_frequency]) %>
+  <%= f.input :sat_of_o_ambiente %>
+  <%= error_span(@physical_exam[:sat_of_o_ambiente]) %>
+  <%= f.input :sat_of_o_supplementary %>
+  <%= error_span(@physical_exam[:sat_of_o_supplementary]) %>
+  <%= f.input :temperature %>
+  <%= error_span(@physical_exam[:temperature]) %>
+  <%= f.input :weight %>
+  <%= error_span(@physical_exam[:weight]) %>
+  <%= f.input :in %>
+  <%= error_span(@physical_exam[:in]) %>
+  <%= f.input :kilograms %>
+  <%= error_span(@physical_exam[:kilograms]) %>
+  <%= f.input :height_in_centimeters %>
+  <%= error_span(@physical_exam[:height_in_centimeters]) %>
+  <%= f.input :glucose %>
+  <%= error_span(@physical_exam[:glucose]) %>
+  <%= f.input :measurement %>
+  <%= error_span(@physical_exam[:measurement]) %>
+  <%= f.input :head %>
+  <%= error_span(@physical_exam[:head]) %>
+  <%= f.input :head_description %>
+  <%= error_span(@physical_exam[:head_description]) %>
+  <%= f.input :sense_organ %>
+  <%= error_span(@physical_exam[:sense_organ]) %>
+  <%= f.input :sense_organ_description %>
+  <%= error_span(@physical_exam[:sense_organ_description]) %>
+  <%= f.input :neck %>
+  <%= error_span(@physical_exam[:neck]) %>
+  <%= f.input :neck_description %>
+  <%= error_span(@physical_exam[:neck_description]) %>
+  <%= f.input :rib_cage %>
+  <%= error_span(@physical_exam[:rib_cage]) %>
+  <%= f.input :rib_cage_description %>
+  <%= error_span(@physical_exam[:rib_cage_description]) %>
+  <%= f.input :heart %>
+  <%= error_span(@physical_exam[:heart]) %>
+  <%= f.input :heart_description %>
+  <%= error_span(@physical_exam[:heart_description]) %>
+  <%= f.input :lungs %>
+  <%= error_span(@physical_exam[:lungs]) %>
+  <%= f.input :lungs_description %>
+  <%= error_span(@physical_exam[:lungs_description]) %>
+  <%= f.input :abdomen %>
+  <%= error_span(@physical_exam[:abdomen]) %>
+  <%= f.input :abdomen_description %>
+  <%= error_span(@physical_exam[:abdomen_description]) %>
+  <%= f.input :genitourinary %>
+  <%= error_span(@physical_exam[:genitourinary]) %>
+  <%= f.input :genitourinary_description %>
+  <%= error_span(@physical_exam[:genitourinary_description]) %>
+  <%= f.input :rectum %>
+  <%= error_span(@physical_exam[:rectum]) %>
+  <%= f.input :rectum_description %>
+  <%= error_span(@physical_exam[:rectum_description]) %>
+  <%= f.input :extremities %>
+  <%= error_span(@physical_exam[:extremities]) %>
+  <%= f.input :extremities_description %>
+  <%= error_span(@physical_exam[:extremities_description]) %>
+  <%= f.input :skin_and_appendages %>
+  <%= error_span(@physical_exam[:skin_and_appendages]) %>
+  <%= f.input :skin_and_appendages_description %>
+  <%= error_span(@physical_exam[:skin_and_appendages_description]) %>
+  <%= f.input :skeletal_muscle %>
+  <%= error_span(@physical_exam[:skeletal_muscle]) %>
+  <%= f.input :skeletal_muscle_description %>
+  <%= error_span(@physical_exam[:skeletal_muscle_description]) %>
+  <%= f.input :mental %>
+  <%= error_span(@physical_exam[:mental]) %>
+  <%= f.input :mental_description %>
+  <%= error_span(@physical_exam[:mental_description]) %>
+  <%= f.input :neurological %>
+  <%= error_span(@physical_exam[:neurological]) %>
+  <%= f.input :neurological_description %>
+  <%= error_span(@physical_exam[:neurological_description]) %>
+  <%= f.input :alteration %>
+  <%= error_span(@physical_exam[:alteration]) %>
+  <%= f.input :eye_opening %>
+  <%= error_span(@physical_exam[:eye_opening]) %>
+  <%= f.input :verbal_answer %>
+  <%= error_span(@physical_exam[:verbal_answer]) %>
+  <%= f.input :motor_response %>
+  <%= error_span(@physical_exam[:motor_response]) %>
+  <%= f.input :other_signs %>
+  <%= error_span(@physical_exam[:other_signs]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patient_physical_exams_path(@patient), :class => 'btn btn-default' %>
+<% end %>

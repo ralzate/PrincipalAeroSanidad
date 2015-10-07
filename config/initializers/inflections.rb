@@ -14,6 +14,10 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
     inflect.irregular 'department', 'departments'
 	inflect.irregular 'city', 'cities'
 	inflect.irregular 'rol', 'roles'
+	inflect.irregular 'system_review', 'system_reviews'
+	inflect.irregular 'physical_exam', 'physical_exams'
+	inflect.irregular 'additional_information', 'additional_informations'
+	
 end
 
 # These inflection rules are supported but not enabled by default:

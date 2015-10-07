@@ -17,12 +17,19 @@ Rails.application.routes.draw do
 
 
   resources :patients , :path => "pascientes" do
-    resources :clinic_histories, :path => "historias_clinicas"
-    resources :personal_histories, :path => "historias_personales"
-    member do
+      resources :clinic_histories, :path => "historias_clinicas" do
+          resources :personal_histories, :path => "historias_personales"
+          resources :system_reviews, :path => "revision_por_sistemas"
+          resources :physical_exams, :path => "examenes_fisicos"
+          resources :additional_informations, :path => "informacion_adicional"
+      end    
+      member do
       get :activate
     end
   end
+
+
+  
   
   resources :products
   resources :sessions

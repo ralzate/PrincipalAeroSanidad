@@ -1,0 +1,128 @@
+<%- model_class = PhysicalExam -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:ta_mmgh) %></th>
+      <th><%= model_class.human_attribute_name(:heart_rate) %></th>
+      <th><%= model_class.human_attribute_name(:breathing_frequency) %></th>
+      <th><%= model_class.human_attribute_name(:sat_of_o_ambiente) %></th>
+      <th><%= model_class.human_attribute_name(:sat_of_o_supplementary) %></th>
+      <th><%= model_class.human_attribute_name(:temperature) %></th>
+      <th><%= model_class.human_attribute_name(:weight) %></th>
+      <th><%= model_class.human_attribute_name(:in) %></th>
+      <th><%= model_class.human_attribute_name(:kilograms) %></th>
+      <th><%= model_class.human_attribute_name(:height_in_centimeters) %></th>
+      <th><%= model_class.human_attribute_name(:glucose) %></th>
+      <th><%= model_class.human_attribute_name(:measurement) %></th>
+      <th><%= model_class.human_attribute_name(:head) %></th>
+      <th><%= model_class.human_attribute_name(:head_description) %></th>
+      <th><%= model_class.human_attribute_name(:sense_organ) %></th>
+      <th><%= model_class.human_attribute_name(:sense_organ_description) %></th>
+      <th><%= model_class.human_attribute_name(:neck) %></th>
+      <th><%= model_class.human_attribute_name(:neck_description) %></th>
+      <th><%= model_class.human_attribute_name(:rib_cage) %></th>
+      <th><%= model_class.human_attribute_name(:rib_cage_description) %></th>
+      <th><%= model_class.human_attribute_name(:heart) %></th>
+      <th><%= model_class.human_attribute_name(:heart_description) %></th>
+      <th><%= model_class.human_attribute_name(:lungs) %></th>
+      <th><%= model_class.human_attribute_name(:lungs_description) %></th>
+      <th><%= model_class.human_attribute_name(:abdomen) %></th>
+      <th><%= model_class.human_attribute_name(:abdomen_description) %></th>
+      <th><%= model_class.human_attribute_name(:genitourinary) %></th>
+      <th><%= model_class.human_attribute_name(:genitourinary_description) %></th>
+      <th><%= model_class.human_attribute_name(:rectum) %></th>
+      <th><%= model_class.human_attribute_name(:rectum_description) %></th>
+      <th><%= model_class.human_attribute_name(:extremities) %></th>
+      <th><%= model_class.human_attribute_name(:extremities_description) %></th>
+      <th><%= model_class.human_attribute_name(:skin_and_appendages) %></th>
+      <th><%= model_class.human_attribute_name(:skin_and_appendages_description) %></th>
+      <th><%= model_class.human_attribute_name(:skeletal_muscle) %></th>
+      <th><%= model_class.human_attribute_name(:skeletal_muscle_description) %></th>
+      <th><%= model_class.human_attribute_name(:mental) %></th>
+      <th><%= model_class.human_attribute_name(:mental_description) %></th>
+      <th><%= model_class.human_attribute_name(:neurological) %></th>
+      <th><%= model_class.human_attribute_name(:neurological_description) %></th>
+      <th><%= model_class.human_attribute_name(:alteration) %></th>
+      <th><%= model_class.human_attribute_name(:eye_opening) %></th>
+      <th><%= model_class.human_attribute_name(:verbal_answer) %></th>
+      <th><%= model_class.human_attribute_name(:motor_response) %></th>
+      <th><%= model_class.human_attribute_name(:other_signs) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @physical_exams.each do |physical_exam| %>
+      <tr>
+        <td><%= link_to physical_exam.id, physical_exam_path(physical_exam) %></td>
+        <td><%= physical_exam.ta_mmgh %></td>
+        <td><%= physical_exam.heart_rate %></td>
+        <td><%= physical_exam.breathing_frequency %></td>
+        <td><%= physical_exam.sat_of_o_ambiente %></td>
+        <td><%= physical_exam.sat_of_o_supplementary %></td>
+        <td><%= physical_exam.temperature %></td>
+        <td><%= physical_exam.weight %></td>
+        <td><%= physical_exam.in %></td>
+        <td><%= physical_exam.kilograms %></td>
+        <td><%= physical_exam.height_in_centimeters %></td>
+        <td><%= physical_exam.glucose %></td>
+        <td><%= physical_exam.measurement %></td>
+        <td><%= physical_exam.head %></td>
+        <td><%= physical_exam.head_description %></td>
+        <td><%= physical_exam.sense_organ %></td>
+        <td><%= physical_exam.sense_organ_description %></td>
+        <td><%= physical_exam.neck %></td>
+        <td><%= physical_exam.neck_description %></td>
+        <td><%= physical_exam.rib_cage %></td>
+        <td><%= physical_exam.rib_cage_description %></td>
+        <td><%= physical_exam.heart %></td>
+        <td><%= physical_exam.heart_description %></td>
+        <td><%= physical_exam.lungs %></td>
+        <td><%= physical_exam.lungs_description %></td>
+        <td><%= physical_exam.abdomen %></td>
+        <td><%= physical_exam.abdomen_description %></td>
+        <td><%= physical_exam.genitourinary %></td>
+        <td><%= physical_exam.genitourinary_description %></td>
+        <td><%= physical_exam.rectum %></td>
+        <td><%= physical_exam.rectum_description %></td>
+        <td><%= physical_exam.extremities %></td>
+        <td><%= physical_exam.extremities_description %></td>
+        <td><%= physical_exam.skin_and_appendages %></td>
+        <td><%= physical_exam.skin_and_appendages_description %></td>
+        <td><%= physical_exam.skeletal_muscle %></td>
+        <td><%= physical_exam.skeletal_muscle_description %></td>
+        <td><%= physical_exam.mental %></td>
+        <td><%= physical_exam.mental_description %></td>
+        <td><%= physical_exam.neurological %></td>
+        <td><%= physical_exam.neurological_description %></td>
+        <td><%= physical_exam.alteration %></td>
+        <td><%= physical_exam.eye_opening %></td>
+        <td><%= physical_exam.verbal_answer %></td>
+        <td><%= physical_exam.motor_response %></td>
+        <td><%= physical_exam.other_signs %></td>
+        <td><%=l physical_exam.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_physical_exam_path(physical_exam), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      physical_exam_path(physical_exam),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_patient_physical_exam_path(@patient),
+            :class => 'btn btn-primary' %> | 
+<%= link_to t('.back', :default => t("helpers.links.back")),
+            patients_path,
+            :class => 'btn btn-inverse' %>

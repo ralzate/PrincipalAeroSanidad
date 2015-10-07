@@ -11,11 +11,7 @@
 
     <%= render 'layouts/header' %>
 
-    <% if current_user %>
-      <% if current_user.activation_state == "pending" %>
-        <div class="alert alert-danger" style="text-align:center">Please activate your account.</div>
-      <% end %>
-    <% end %>
+   
     <div class="container">
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>" style="text-align:center">

@@ -1,0 +1,51 @@
+<%- model_class = SystemReview -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:cardiovascular) %>:</strong></dt>
+  <dd><%= @system_review.cardiovascular %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cardiovascular_description) %>:</strong></dt>
+  <dd><%= @system_review.cardiovascular_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:respiratory) %>:</strong></dt>
+  <dd><%= @system_review.respiratory %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:abdominal) %>:</strong></dt>
+  <dd><%= @system_review.abdominal %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:abdominal_description) %>:</strong></dt>
+  <dd><%= @system_review.abdominal_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:genito_urinario) %>:</strong></dt>
+  <dd><%= @system_review.genito_urinario %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:genito_urinario_description) %>:</strong></dt>
+  <dd><%= @system_review.genito_urinario_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neurological) %>:</strong></dt>
+  <dd><%= @system_review.neurological %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neurological_description) %>:</strong></dt>
+  <dd><%= @system_review.neurological_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mental) %>:</strong></dt>
+  <dd><%= @system_review.mental %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mental_description) %>:</strong></dt>
+  <dd><%= @system_review.mental_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sense_organ) %>:</strong></dt>
+  <dd><%= @system_review.sense_organ %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sense_organ_description) %>:</strong></dt>
+  <dd><%= @system_review.sense_organ_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skeletal_muscle) %>:</strong></dt>
+  <dd><%= @system_review.skeletal_muscle %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skeletal_muscle_description) %>:</strong></dt>
+  <dd><%= @system_review.skeletal_muscle_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skin_and_appendages) %>:</strong></dt>
+  <dd><%= @system_review.skin_and_appendages %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:skin_and_appendages_description) %>:</strong></dt>
+  <dd><%= @system_review.skin_and_appendages_description %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              system_reviews_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_system_review_path(@system_review), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              system_review_path(@system_review),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

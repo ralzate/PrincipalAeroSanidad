@@ -1,184 +1,91 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = PersonalHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Neunatales:</strong>
-  <%= @personal_history.neunatales %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:neunatales) %>:</strong></dt>
+  <dd><%= @personal_history.neunatales %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neunatales_description) %>:</strong></dt>
+  <dd><%= @personal_history.neunatales_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:patologicos) %>:</strong></dt>
+  <dd><%= @personal_history.patologicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:patologicos_description) %>:</strong></dt>
+  <dd><%= @personal_history.patologicos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:quirurgicos) %>:</strong></dt>
+  <dd><%= @personal_history.quirurgicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:quirurgicos_description) %>:</strong></dt>
+  <dd><%= @personal_history.quirurgicos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:farmacologicos) %>:</strong></dt>
+  <dd><%= @personal_history.farmacologicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:farmacologicos_description) %>:</strong></dt>
+  <dd><%= @personal_history.farmacologicos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:alergicos) %>:</strong></dt>
+  <dd><%= @personal_history.alergicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:alergicos_description) %>:</strong></dt>
+  <dd><%= @personal_history.alergicos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:toxicos) %>:</strong></dt>
+  <dd><%= @personal_history.toxicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:toxicos_description) %>:</strong></dt>
+  <dd><%= @personal_history.toxicos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:traumaticos) %>:</strong></dt>
+  <dd><%= @personal_history.traumaticos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:traumaticos_description) %>:</strong></dt>
+  <dd><%= @personal_history.traumaticos_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hospitables) %>:</strong></dt>
+  <dd><%= @personal_history.hospitables %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hospitables_description) %>:</strong></dt>
+  <dd><%= @personal_history.hospitables_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:atep_laboral) %>:</strong></dt>
+  <dd><%= @personal_history.atep_laboral %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:atep_laboral_description) %>:</strong></dt>
+  <dd><%= @personal_history.atep_laboral_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:familiar) %>:</strong></dt>
+  <dd><%= @personal_history.familiar %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:familiar_description) %>:</strong></dt>
+  <dd><%= @personal_history.familiar_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:inmunologicos) %>:</strong></dt>
+  <dd><%= @personal_history.inmunologicos %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:inmunologios_description) %>:</strong></dt>
+  <dd><%= @personal_history.inmunologios_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:asociado_viajes_de_vuelo) %>:</strong></dt>
+  <dd><%= @personal_history.asociado_viajes_de_vuelo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:asociado_viajes_de_vuelo_description) %>:</strong></dt>
+  <dd><%= @personal_history.asociado_viajes_de_vuelo_description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:menstrual_cycle) %>:</strong></dt>
+  <dd><%= @personal_history.menstrual_cycle %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gestational_age) %>:</strong></dt>
+  <dd><%= @personal_history.gestational_age %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:eco) %>:</strong></dt>
+  <dd><%= @personal_history.eco %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fum) %>:</strong></dt>
+  <dd><%= @personal_history.fum %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pregnancy) %>:</strong></dt>
+  <dd><%= @personal_history.pregnancy %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:g) %>:</strong></dt>
+  <dd><%= @personal_history.g %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:p) %>:</strong></dt>
+  <dd><%= @personal_history.p %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:c) %>:</strong></dt>
+  <dd><%= @personal_history.c %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:a) %>:</strong></dt>
+  <dd><%= @personal_history.a %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:m) %>:</strong></dt>
+  <dd><%= @personal_history.m %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:v) %>:</strong></dt>
+  <dd><%= @personal_history.v %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:e) %>:</strong></dt>
+  <dd><%= @personal_history.e %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:patient_id) %>:</strong></dt>
+  <dd><%= @personal_history.patient_id %></dd>
+</dl>
 
-<p>
-  <strong>Neunatales description:</strong>
-  <%= @personal_history.neunatales_description %>
-</p>
-
-<p>
-  <strong>Patologicos:</strong>
-  <%= @personal_history.patologicos %>
-</p>
-
-<p>
-  <strong>Patologicos description:</strong>
-  <%= @personal_history.patologicos_description %>
-</p>
-
-<p>
-  <strong>Quirurgicos:</strong>
-  <%= @personal_history.quirurgicos %>
-</p>
-
-<p>
-  <strong>Quirurgicos description:</strong>
-  <%= @personal_history.quirurgicos_description %>
-</p>
-
-<p>
-  <strong>Farmacologicos:</strong>
-  <%= @personal_history.farmacologicos %>
-</p>
-
-<p>
-  <strong>Farmacologicos description:</strong>
-  <%= @personal_history.farmacologicos_description %>
-</p>
-
-<p>
-  <strong>Alergicos:</strong>
-  <%= @personal_history.alergicos %>
-</p>
-
-<p>
-  <strong>Alergicos description:</strong>
-  <%= @personal_history.alergicos_description %>
-</p>
-
-<p>
-  <strong>Toxicos:</strong>
-  <%= @personal_history.toxicos %>
-</p>
-
-<p>
-  <strong>Toxicos description:</strong>
-  <%= @personal_history.toxicos_description %>
-</p>
-
-<p>
-  <strong>Traumaticos:</strong>
-  <%= @personal_history.traumaticos %>
-</p>
-
-<p>
-  <strong>Traumaticos description:</strong>
-  <%= @personal_history.traumaticos_description %>
-</p>
-
-<p>
-  <strong>Hospitables:</strong>
-  <%= @personal_history.hospitables %>
-</p>
-
-<p>
-  <strong>Hospitables description:</strong>
-  <%= @personal_history.hospitables_description %>
-</p>
-
-<p>
-  <strong>Atep laboral:</strong>
-  <%= @personal_history.atep_laboral %>
-</p>
-
-<p>
-  <strong>Atep laboral description:</strong>
-  <%= @personal_history.atep_laboral_description %>
-</p>
-
-<p>
-  <strong>Familiar:</strong>
-  <%= @personal_history.familiar %>
-</p>
-
-<p>
-  <strong>Familiar description:</strong>
-  <%= @personal_history.familiar_description %>
-</p>
-
-<p>
-  <strong>Inmunologicos:</strong>
-  <%= @personal_history.inmunologicos %>
-</p>
-
-<p>
-  <strong>Inmunologios description:</strong>
-  <%= @personal_history.inmunologios_description %>
-</p>
-
-<p>
-  <strong>Asociado viajes de vuelo:</strong>
-  <%= @personal_history.asociado_viajes_de_vuelo %>
-</p>
-
-<p>
-  <strong>Asociado viajes de vuelo description:</strong>
-  <%= @personal_history.asociado_viajes_de_vuelo_description %>
-</p>
-
-<p>
-  <strong>Menstrual cycle:</strong>
-  <%= @personal_history.menstrual_cycle %>
-</p>
-
-<p>
-  <strong>Gestational age:</strong>
-  <%= @personal_history.gestational_age %>
-</p>
-
-<p>
-  <strong>Eco:</strong>
-  <%= @personal_history.eco %>
-</p>
-
-<p>
-  <strong>Fum:</strong>
-  <%= @personal_history.fum %>
-</p>
-
-<p>
-  <strong>Pregnancy:</strong>
-  <%= @personal_history.pregnancy %>
-</p>
-
-<p>
-  <strong>G:</strong>
-  <%= @personal_history.g %>
-</p>
-
-<p>
-  <strong>P:</strong>
-  <%= @personal_history.p %>
-</p>
-
-<p>
-  <strong>C:</strong>
-  <%= @personal_history.c %>
-</p>
-
-<p>
-  <strong>A:</strong>
-  <%= @personal_history.a %>
-</p>
-
-<p>
-  <strong>M:</strong>
-  <%= @personal_history.m %>
-</p>
-
-<p>
-  <strong>V:</strong>
-  <%= @personal_history.v %>
-</p>
-
-<p>
-  <strong>E:</strong>
-  <%= @personal_history.e %>
-</p>
-
-<%= link_to 'Edit', edit_personal_history_path(@personal_history) %> |
-<%= link_to 'Back', personal_histories_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              personal_histories_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_personal_history_path(@personal_history), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              personal_history_path(@personal_history),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

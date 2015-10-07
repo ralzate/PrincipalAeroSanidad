@@ -1,10 +1,11 @@
 module UsersHelper
-  def activated_user
-    unless current_user.activation_state == "active" || current_user.admin
-      flash[:danger] = "Please activate your account"
-      redirect_to products_path
-    end
-  end
+  
+  #def activated_user
+    #unless current_user.activation_state == "active" || current_user.admin
+     # flash[:danger] = "Please activate your account"
+     # redirect_to root_path
+    #end
+ # end
 
   def correct_user
     unless current_user.admin? || @product = current_user.products.find_by(id: params[:id])

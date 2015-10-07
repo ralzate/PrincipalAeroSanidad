@@ -1,0 +1,23 @@
+
+<button><a href="javascript:history.back()">Revision por sistema</a> </button>
+
+
+<%= simple_form_for [@patient, @additional_information], :html => { :class => 'form-horizontal' } do |f| %>
+
+
+  <%= f.input :analysis %>
+  <%= error_span(@additional_information[:analysis]) %>
+  <%= f.input :print_diagnosed %>
+  <%= error_span(@additional_information[:print_diagnosed]) %>
+  <%= f.input :plan_and_treatment %>
+  <%= error_span(@additional_information[:plan_and_treatment]) %>
+  <%= f.input :observations_recommendations %>
+  <%= error_span(@additional_information[:observations_recommendations]) %>
+
+
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                patient_additional_informations_path(@patient), :class => 'btn btn-default' %>
+
+<% end %>

@@ -1,0 +1,4 @@
+json.array!(@physical_exams) do |physical_exam|
+  json.extract! physical_exam, :id, :ta_mmgh, :heart_rate, :breathing_frequency, :sat_of_o_ambiente, :sat_of_o_supplementary, :temperature, :weight, :in, :kilograms, :height_in_centimeters, :glucose, :measurement, :head, :head_description, :sense_organ, :sense_organ_description, :neck, :neck_description, :rib_cage, :rib_cage_description, :heart, :heart_description, :lungs, :lungs_description, :abdomen, :abdomen_description, :genitourinary, :genitourinary_description, :rectum, :rectum_description, :extremities, :extremities_description, :skin_and_appendages, :skin_and_appendages_description, :skeletal_muscle, :skeletal_muscle_description, :mental, :mental_description, :neurological, :neurological_description, :alteration, :eye_opening, :verbal_answer, :motor_response, :other_signs
+  json.url physical_exam_url(physical_exam, format: :json)
+end

@@ -1,5 +1,5 @@
 class PersonalHistoriesController < ApplicationController
-
+  
   before_action :set_member
 
   # GET /clinic_histories
@@ -26,10 +26,11 @@ class PersonalHistoriesController < ApplicationController
   # POST /personal_histories.json
   def create
     @personal_history = PersonalHistory.new(personal_history_params)
+    @personal_history.patient_id = @patient.id
 
     respond_to do |format|
       if @personal_history.save
-        format.html { redirect_to @personal_history, notice: 'Personal history was successfully created.' }
+        format.html { redirect_to new_patient_system_review_path, notice: 'Personal history was successfully created.' }
         format.json { render :show, status: :created, location: @personal_history }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class PersonalHistoriesController < ApplicationController
   def update
     respond_to do |format|
       if @personal_history.update(personal_history_params)
-        format.html { redirect_to @personal_history, notice: 'Personal history was successfully updated.' }
+        format.html { redirect_to clinic_personal_histories_path(@patient, @personal_history), notice: 'clinic_history actualizada satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @personal_history }
       else
         format.html { render :edit }
@@ -57,15 +58,16 @@ class PersonalHistoriesController < ApplicationController
   def destroy
     @personal_history.destroy
     respond_to do |format|
-      format.html { redirect_to personal_histories_url, notice: 'Personal history was successfully destroyed.' }
+      format.html { redirect_to patient_personal_histories_path(@patient, @personal_history), notice: 'Historia Clinica Eliminada Correctamente.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_personal_history
-      @personal_history = PersonalHistory.find(params[:id])
+    def set_member
+      @patient = Patient.find(params[:patient_id])
+      @personal_history = PersonalHistory.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

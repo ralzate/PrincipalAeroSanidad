@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  analysis: MyText
+  print_diagnosed: MyText
+  plan_and_treatment: MyText
+  observations_recommendations: MyText
+
+two:
+  analysis: MyText
+  print_diagnosed: MyText
+  plan_and_treatment: MyText
+  observations_recommendations: MyText
